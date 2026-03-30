@@ -6,8 +6,8 @@
   --border: #434b56;
   --text: #f3f5f7;
   --muted: #bcc4ce;
-  --accent: #d9b56d;
-  --accent-dark: #b9944f;
+  --accent: #6e9277;
+  --accent-dark: #5e7d66;
   --max-width: 1180px;
   --radius: 18px;
   --shadow: 0 14px 40px rgba(0, 0, 0, 0.22);
@@ -55,6 +55,44 @@ a {
   min-height: 74px;
 }
 
+.brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-placeholder,
+.footer-logo-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border-radius: 10px;
+}
+
+.logo-placeholder {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.footer-logo-placeholder {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
 .brand {
   font-size: 1.1rem;
   font-weight: 700;
@@ -79,8 +117,12 @@ a {
 .hero {
   padding: 90px 0 70px;
   background:
-    radial-gradient(circle at top left, rgba(217, 181, 109, 0.12), transparent 30%),
+    radial-gradient(circle at top left, rgba(110, 146, 119, 0.14), transparent 30%),
     linear-gradient(180deg, #252a31 0%, #1e2228 100%);
+}
+
+.hero-subpage {
+  padding: 100px 0 60px;
 }
 
 .hero-grid {
@@ -231,7 +273,8 @@ a {
 .card p,
 .step p,
 .info-panel p,
-.inquiry-intro {
+.inquiry-intro,
+.narrow-content p {
   color: var(--muted);
 }
 
@@ -276,7 +319,7 @@ a {
 
 .inquiry-section {
   background:
-    linear-gradient(180deg, rgba(217, 181, 109, 0.06), transparent 18%),
+    linear-gradient(180deg, rgba(110, 146, 119, 0.07), transparent 18%),
     var(--bg);
 }
 
@@ -339,12 +382,49 @@ textarea:focus {
   background: #1a1e23;
 }
 
-.footer-inner {
+.footer-full {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-company {
+  margin: 0 0 4px;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.footer-tag {
+  margin: 0;
   color: var(--muted);
-  font-size: 0.95rem;
+}
+
+.footer-contact {
+  text-align: right;
+}
+
+.footer-contact p {
+  margin: 0 0 8px;
+}
+
+.footer-contact a {
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.footer-contact a:hover {
+  color: var(--text);
+}
+
+.narrow-content {
+  max-width: 780px;
 }
 
 @media (max-width: 980px) {
@@ -368,6 +448,10 @@ textarea:focus {
     padding: 14px 0;
   }
 
+  .brand-wrap {
+    justify-content: center;
+  }
+
   .nav nav {
     gap: 16px;
     flex-wrap: wrap;
@@ -375,8 +459,12 @@ textarea:focus {
   }
 
   .form-row,
-  .footer-inner {
+  .footer-full {
     flex-direction: column;
+  }
+
+  .footer-contact {
+    text-align: left;
   }
 
   .hero h1 {
