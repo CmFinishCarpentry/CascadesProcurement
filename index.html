@@ -13,8 +13,16 @@
 <body>
   <header class="site-header">
     <div class="container nav">
-      <div class="brand">Cascades Procurement</div>
+      <div class="brand-wrap">
+        <a href="index.html" class="brand-logo-link">
+          <div class="logo-placeholder">LOGO</div>
+        </a>
+        <div class="brand">Cascades Procurement</div>
+      </div>
+
       <nav>
+        <a href="about.html">About</a>
+        <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#inquiry">Inquiry</a>
       </nav>
@@ -98,9 +106,11 @@
 
           <div class="step">
             <span class="step-number">02</span>
-            <h3>Review and Allignment </h3>
-            <p>We go over the details to better understand your goals, budget, and timeline,
-  and make sure the search is aligned from the start.</p>
+            <h3>Review and Alignment</h3>
+            <p>
+              We go over the details to better understand your goals, budget, and timeline,
+              and make sure the search is aligned from the start.
+            </p>
           </div>
 
           <div class="step">
@@ -151,7 +161,8 @@
           <div class="info-panel">
             <h3>Early fit check</h3>
             <p>
-             A short upfront review helps dial in the right approach so the search stays efficient and aligned with what you’re actually looking for.
+              A short upfront review helps dial in the right approach so the search stays efficient and aligned with what you’re actually looking for.
+            </p>
           </div>
         </div>
       </div>
@@ -162,117 +173,128 @@
         <p class="section-label">Inquiry</p>
         <h2>Start your request</h2>
         <p class="inquiry-intro">
-          Fill out the details below and we’ll review your request. 
+          Fill out the details below and we’ll review your request.
         </p>
 
-      <form class="inquiry-form" action="https://formspree.io/f/xgopvnvy" method="POST">
-  <input type="hidden" name="_subject" value="New Cascades Procurement Inquiry" />
+        <form class="inquiry-form" action="https://formspree.io/f/xgopvnvy" method="POST">
+          <input type="hidden" name="_subject" value="New Cascades Procurement Inquiry" />
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Your name" required />
-    </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
 
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Your email" required />
-    </div>
-  </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your email" required />
+            </div>
+          </div>
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="phone">Phone</label>
-      <input type="text" id="phone" name="phone" placeholder="Your phone number" />
-    </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" name="phone" placeholder="Your phone number" />
+            </div>
 
-    <div class="form-group">
-      <label for="category">What are you sourcing?</label>
-      <select id="category" name="category" required>
-        <option value="">Select one</option>
-        <option>Vehicle</option>
-        <option>Machinery</option>
-        <option>Other</option>
-      </select>
-    </div>
-  </div>
+            <div class="form-group">
+              <label for="category">What are you sourcing?</label>
+              <select id="category" name="category" required>
+                <option value="">Select one</option>
+                <option>Vehicle</option>
+                <option>Machinery</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="search_range">Search Range</label>
-      <select id="search_range" name="search_range" required>
-        <option value="">Select one</option>
-        <option>Local (within 100 miles)</option>
-        <option>Regional (within 500 miles)</option>
-        <option>Nationwide</option>
-        <option>International</option>
-      </select>
-    </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="search_range">Search Range</label>
+              <select id="search_range" name="search_range" required>
+                <option value="">Select one</option>
+                <option>Local (within 100 miles)</option>
+                <option>Regional (within 500 miles)</option>
+                <option>Nationwide</option>
+                <option>International</option>
+              </select>
+            </div>
 
-    <div class="form-group">
-      <label for="logistics">Willingness to Travel / Transport</label>
-      <select id="logistics" name="logistics" required>
-        <option value="">Select one</option>
-        <option>Pickup locally only</option>
-        <option>Willing to travel</option>
-        <option>Open to shipping</option>
-      </select>
-    </div>
-  </div>
+            <div class="form-group">
+              <label for="logistics">Willingness to Travel / Transport</label>
+              <select id="logistics" name="logistics" required>
+                <option value="">Select one</option>
+                <option>Pickup locally only</option>
+                <option>Willing to travel</option>
+                <option>Open to shipping</option>
+              </select>
+            </div>
+          </div>
 
-  <div class="form-row">
-    <div class="form-group">
-      <label for="budget">Budget</label>
-      <input type="text" id="budget" name="budget" placeholder="Example: $47,000–$50,000" />
-    </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="budget">Budget</label>
+              <input type="text" id="budget" name="budget" placeholder="Example: $47,000–$50,000" />
+            </div>
 
-    <div class="form-group">
-      <label for="timeline">Timeline</label>
-      <select id="timeline" name="timeline">
-        <option value="">Select one</option>
-        <option>ASAP</option>
-        <option>Within 30 days</option>
-        <option>1–3 months</option>
-        <option>Flexible</option>
-      </select>
-    </div>
-  </div>
+            <div class="form-group">
+              <label for="timeline">Timeline</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select one</option>
+                <option>ASAP</option>
+                <option>Within 30 days</option>
+                <option>1–3 months</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+          </div>
 
-  <div class="form-row">
-    <div class="form-group full-width">
-      <label for="details">What are you looking for?</label>
-      <textarea
-        id="details"
-        name="details"
-        rows="7"
-        placeholder="Year, make, model, machinery type, desired features, condition, location preferences, or anything else important."
-        required
-      ></textarea>
-    </div>
-  </div>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="details">What are you looking for?</label>
+              <textarea
+                id="details"
+                name="details"
+                rows="7"
+                placeholder="Year, make, model, machinery type, desired features, condition, location preferences, or anything else important."
+                required
+              ></textarea>
+            </div>
+          </div>
 
-  <div class="form-row">
-    <div class="form-group full-width">
-      <label for="extra_notes">Anything else we should know?</label>
-      <input
-        type="text"
-        id="extra_notes"
-        name="extra_notes"
-        placeholder="Preferences, deal breakers, prior listings you’ve considered, etc."
-      />
-    </div>
-  </div>
+          <div class="form-row">
+            <div class="form-group full-width">
+              <label for="extra_notes">Anything else we should know?</label>
+              <input
+                type="text"
+                id="extra_notes"
+                name="extra_notes"
+                placeholder="Preferences, deal breakers, prior listings you’ve considered, etc."
+              />
+            </div>
+          </div>
 
-  <button type="submit" class="btn btn-primary">Send Inquiry</button>
-</form>
+          <button type="submit" class="btn btn-primary">Send Inquiry</button>
+        </form>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>Cascades Procurement LLC</p>
-      <p>Vehicle & machinery sourcing</p>
+    <div class="container footer-full">
+      <div class="footer-brand">
+        <div class="footer-logo-placeholder">LOGO</div>
+        <div>
+          <p class="footer-company">Cascades Procurement LLC</p>
+          <p class="footer-tag">Vehicle & machinery sourcing</p>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <p><a href="mailto:youremail@example.com">youremail@example.com</a></p>
+        <p><a href="tel:+10000000000">(000) 000-0000</a></p>
+        <p><a href="https://instagram.com/yourinstagram" target="_blank" rel="noopener noreferrer">@yourinstagram</a></p>
+      </div>
     </div>
   </footer>
 </body>
