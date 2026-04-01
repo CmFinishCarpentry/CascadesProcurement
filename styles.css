@@ -1039,7 +1039,122 @@ ul  { list-style: none; }
 .stagger .fade-up:nth-child(2) { transition-delay: .12s; }
 .stagger .fade-up:nth-child(3) { transition-delay: .24s; }
 .stagger .fade-up:nth-child(4) { transition-delay: .36s; }
-
+/* ---------- About Story Photo ---------- */
+.about-story-visual {
+  background: none;        /* override the old gradient bg */
+  padding: 0;              /* override old padding */
+  min-height: auto;        /* override old min-height */
+  border-radius: 16px;
+  overflow: hidden;
+}
+ 
+.about-story-img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, .1);
+}
+ 
+ 
+/* ---------- Meet the Team ---------- */
+.team {
+  padding: var(--section-pad) 0;
+  background: var(--warm-white);
+}
+ 
+.team-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+ 
+.team-header .section-sub {
+  margin-inline: auto;
+}
+ 
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+ 
+.team-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, .05);
+  transition: all .4s var(--ease);
+}
+ 
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, .08);
+}
+ 
+.team-photo {
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--cream), var(--warm-gray));
+  position: relative;
+}
+ 
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform .5s var(--ease);
+}
+ 
+.team-card:hover .team-photo img {
+  transform: scale(1.03);
+}
+ 
+.team-info {
+  padding: 2rem;
+}
+ 
+.team-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: .25rem;
+}
+ 
+.team-role {
+  display: inline-block;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 1rem;
+}
+ 
+.team-info p {
+  font-size: .95rem;
+  color: var(--text-light);
+  line-height: 1.75;
+}
+ 
+ 
+/* ---------- Responsive: Team ---------- */
+@media (max-width: 700px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+  }
+ 
+  .team-photo {
+    height: 280px;
+  }
+}
+ 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .value-grid,
