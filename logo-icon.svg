@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#264d3b"/>
+      <stop offset="100%" stop-color="#1b3a2d"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(50,50)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#1b3a2d" stroke-width="1.2" opacity=".6"/>
+    <!-- Cardinal points -->
+    <polygon points="0,-48 -4,-14 0,-10 4,-14" fill="#1b3a2d"/>
+    <polygon points="0,-48 0,-10 4,-14" fill="#264d3b"/>
+    <polygon points="0,48 -4,14 0,10 4,14" fill="#1b3a2d"/>
+    <polygon points="0,48 0,10 4,14" fill="#264d3b"/>
+    <polygon points="48,0 14,-4 10,0 14,4" fill="#1b3a2d"/>
+    <polygon points="48,0 10,0 14,4" fill="#264d3b"/>
+    <polygon points="-48,0 -14,-4 -10,0 -14,4" fill="#1b3a2d"/>
+    <polygon points="-48,0 -10,0 -14,4" fill="#264d3b"/>
+    <!-- Intercardinal points -->
+    <polygon points="31,-31 6,-3 3,-6" fill="#1b3a2d" opacity=".5"/>
+    <polygon points="31,31 6,3 3,6" fill="#1b3a2d" opacity=".5"/>
+    <polygon points="-31,31 -6,3 -3,6" fill="#1b3a2d" opacity=".5"/>
+    <polygon points="-31,-31 -6,-3 -3,-6" fill="#1b3a2d" opacity=".5"/>
+    <!-- Center circle -->
+    <circle cx="0" cy="0" r="28" fill="url(#cg)"/>
+    <circle cx="0" cy="0" r="28" fill="none" stroke="#c8943e" stroke-width=".8" opacity=".35"/>
+    <!-- Mountains -->
+    <polygon points="-13,8 0,-14 13,8" fill="#5a7a6a"/>
+    <polygon points="0,-14 13,8 4,8 0,-3" fill="#6d9480"/>
+    <polygon points="0,-14 -3,-8 0,-6 3,-8" fill="#e8e4dc" opacity=".8"/>
+    <polygon points="-19,8 -10,-5 -1,8" fill="#4a6d5a"/>
+    <polygon points="1,8 10,-5 19,8" fill="#4a6d5a"/>
+    <line x1="-20" y1="8" x2="20" y2="8" stroke="#c8943e" stroke-width=".6" opacity=".45"/>
+  </g>
+</svg>

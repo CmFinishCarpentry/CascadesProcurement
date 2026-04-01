@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480">
+  <defs>
+    <!-- Subtle drop shadow for depth -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#0a1f16" flood-opacity=".25"/>
+    </filter>
+    <!-- Softer glow behind compass -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Gradient for the circle fill -->
+    <linearGradient id="circleGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#264d3b"/>
+      <stop offset="100%" stop-color="#1b3a2d"/>
+    </linearGradient>
+    <!-- Gradient for mountain highlight -->
+    <linearGradient id="mountainGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c8943e" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#daa74e" stop-opacity=".6"/>
+    </linearGradient>
+    <!-- Subtle inner shadow on circle -->
+    <radialGradient id="innerShadow" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#fff" stop-opacity=".06"/>
+      <stop offset="100%" stop-color="#000" stop-opacity=".15"/>
+    </radialGradient>
+  </defs>
+
+  <g transform="translate(200, 190)">
+
+    <!-- ===== COMPASS ROSE ===== -->
+    <g filter="url(#shadow)">
+
+      <!-- Outer ring -->
+      <circle cx="0" cy="0" r="118" fill="none" stroke="#1b3a2d" stroke-width="2.5" opacity=".7"/>
+
+      <!-- 8 small tick marks (intercardinals) -->
+      <g stroke="#1b3a2d" stroke-width="1.8" opacity=".45">
+        <line x1="0" y1="-112" x2="0" y2="-124" transform="rotate(45)"/>
+        <line x1="0" y1="-112" x2="0" y2="-124" transform="rotate(135)"/>
+        <line x1="0" y1="-112" x2="0" y2="-124" transform="rotate(225)"/>
+        <line x1="0" y1="-112" x2="0" y2="-124" transform="rotate(315)"/>
+      </g>
+
+      <!-- Main compass points (N, E, S, W) — sharp elongated diamonds -->
+      <!-- North -->
+      <polygon points="0,-140  -12,-40  0,-28  12,-40" fill="#1b3a2d"/>
+      <polygon points="0,-140  0,-28  12,-40" fill="#264d3b"/>
+      <!-- South -->
+      <polygon points="0,140  -12,40  0,28  12,40" fill="#1b3a2d"/>
+      <polygon points="0,140  0,28  12,40" fill="#264d3b"/>
+      <!-- East -->
+      <polygon points="140,0  40,-12  28,0  40,12" fill="#1b3a2d"/>
+      <polygon points="140,0  28,0  40,12" fill="#264d3b"/>
+      <!-- West -->
+      <polygon points="-140,0  -40,-12  -28,0  -40,12" fill="#1b3a2d"/>
+      <polygon points="-140,0  -28,0  -40,12" fill="#264d3b"/>
+
+      <!-- Secondary points (NE, SE, SW, NW) — shorter -->
+      <!-- NE -->
+      <polygon points="88,-88  18,-8  8,-18" fill="#1b3a2d" opacity=".6"/>
+      <polygon points="88,-88  8,-18  18,-8" fill="#264d3b" opacity=".6"/>
+      <!-- SE -->
+      <polygon points="88,88  18,8  8,18" fill="#1b3a2d" opacity=".6"/>
+      <polygon points="88,88  8,18  18,8" fill="#264d3b" opacity=".6"/>
+      <!-- SW -->
+      <polygon points="-88,88  -18,8  -8,18" fill="#1b3a2d" opacity=".6"/>
+      <polygon points="-88,88  -8,18  -18,8" fill="#264d3b" opacity=".6"/>
+      <!-- NW -->
+      <polygon points="-88,-88  -18,-8  -8,-18" fill="#1b3a2d" opacity=".6"/>
+      <polygon points="-88,-88  -8,-18  -18,-8" fill="#264d3b" opacity=".6"/>
+
+      <!-- Cardinal letters -->
+      <text x="0" y="-150" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#c8943e" letter-spacing="1">N</text>
+      <text x="0" y="164" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#c8943e" letter-spacing="1">S</text>
+      <text x="155" y="5" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#c8943e" letter-spacing="1">E</text>
+      <text x="-155" y="5" text-anchor="middle" font-family="'Inter', sans-serif" font-size="13" font-weight="600" fill="#c8943e" letter-spacing="1">W</text>
+
+      <!-- ===== CENTER CIRCLE WITH MOUNTAINS ===== -->
+      <!-- Main filled circle -->
+      <circle cx="0" cy="0" r="82" fill="url(#circleGrad)"/>
+      <!-- Inner shadow overlay -->
+      <circle cx="0" cy="0" r="82" fill="url(#innerShadow)"/>
+      <!-- Rim highlight -->
+      <circle cx="0" cy="0" r="82" fill="none" stroke="#c8943e" stroke-width="1.5" opacity=".35"/>
+
+      <!-- Mountain range -->
+      <g>
+        <!-- Back mountains (subtle, lighter) -->
+        <polygon points="-52,20  -30,-22  -8,20" fill="#3a6b52" opacity=".5"/>
+        <polygon points="8,20  32,-18  56,20" fill="#3a6b52" opacity=".5"/>
+
+        <!-- Main center peak -->
+        <polygon points="-38,24  0,-42  38,24" fill="#5a7a6a"/>
+        <!-- Right face (lighter) -->
+        <polygon points="0,-42  38,24  10,24  0,-10" fill="#6d9480"/>
+        <!-- Snow cap -->
+        <polygon points="0,-42  -10,-24  0,-18  10,-24" fill="#e8e4dc" opacity=".85"/>
+        <polygon points="0,-42  0,-18  10,-24" fill="#fff" opacity=".7"/>
+
+        <!-- Left secondary peak -->
+        <polygon points="-55,24  -28,-16  -2,24" fill="#4a6d5a"/>
+        <polygon points="-28,-16  -2,24  -12,24  -18,-2" fill="#5a7f6a"/>
+
+        <!-- Right secondary peak -->
+        <polygon points="5,24  30,-14  55,24" fill="#4a6d5a"/>
+        <polygon points="30,-14  55,24  40,24  32,0" fill="#5a7f6a"/>
+
+        <!-- Amber accent line at base -->
+        <line x1="-60" y1="24" x2="60" y2="24" stroke="#c8943e" stroke-width="1.2" opacity=".5"/>
+      </g>
+
+    </g>
+  </g>
+
+  <!-- ===== TEXT ===== -->
+  <!-- CASCADES -->
+  <text x="200" y="385" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="46" font-weight="600" fill="#1b3a2d" letter-spacing="6">CASCADES</text>
+
+  <!-- PROCUREMENT -->
+  <text x="200" y="418" text-anchor="middle" font-family="'Inter', sans-serif" font-size="17" font-weight="400" fill="#5a7a6a" letter-spacing="8">PROCUREMENT</text>
+
+  <!-- Subtle amber underline accent -->
+  <line x1="145" y1="432" x2="255" y2="432" stroke="#c8943e" stroke-width="1.5" opacity=".5" stroke-linecap="round"/>
+</svg>
